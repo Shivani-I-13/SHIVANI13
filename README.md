@@ -165,14 +165,7 @@ The bootstrap command needs the IP address the Ceph monitor will listen on.
 ip r
 ```
 
-In the output, find the line starting with `default` and note the interface name. Then note the `src` IP address of that interface. Example:
-
-```
-default via 192.168.1.1 dev ens192 proto static metric 100
-192.168.1.0/24 dev ens192 proto kernel scope link src 192.168.1.50 metric 100
-```
-
-In this example the VM IP is `192.168.1.50`.
+Note the VM IP address (the `src` address of the default interface) for the next step.
 
 ### Step 6: Bootstrap the cluster
 
@@ -317,8 +310,11 @@ sudo ceph -s
 
 ## 10. References
 
-- [cephadm documentation](https://docs.ceph.com/en/latest/cephadm/)
-- [cephadm install guide](https://docs.ceph.com/en/latest/cephadm/install/)
-- [Ceph Squid release notes](https://docs.ceph.com/en/latest/releases/squid/)
-- [Ceph Dashboard documentation](https://docs.ceph.com/en/latest/mgr/dashboard/)
-- [Docker Engine on RHEL-family](https://docs.docker.com/engine/install/rhel/)
+- [Ceph Documentation](https://docs.ceph.com/en/latest/)
+- [cephadm Documentation](https://docs.ceph.com/en/latest/cephadm/)
+- [cephadm Install Guide](https://docs.ceph.com/en/latest/cephadm/install/)
+- [Ceph Squid Release Notes](https://docs.ceph.com/en/latest/releases/squid/)
+- [Ceph Dashboard Documentation](https://docs.ceph.com/en/latest/mgr/dashboard/)
+- [Rocky Linux ISO Download Page](https://rockylinux.org/download)
+- [Docker Engine Documentation](https://docs.docker.com/engine/)
+- [Install Docker Engine on RHEL-family](https://docs.docker.com/engine/install/rhel/)
